@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<title>上美研究生会2026入会报名表 · 下载</title>
+<meta name="description" content="上海大学上海美术学院研究生会 2026 入会报名表下载">
+<style>
+  :root{
+    --bg:#f5f6f8;
+    --card:#ffffff;
+    --text:#1a1d24;
+    --sub:#6b7280;
+    --line:#e6e8ec;
+    --brand:#1f6feb;
+    --brand-2:#0f4fc4;
+    --ok:#0a8f4c;
+    --shadow:0 6px 28px rgba(16,24,40,.10);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#14161a;
+      --card:#1d2027;
+      --text:#eef1f6;
+      --sub:#9aa4b2;
+      --line:#2c313a;
+      --brand:#4d8dff;
+      --brand-2:#7aa9ff;
+      --ok:#3ecf8e;
+      --shadow:0 6px 28px rgba(0,0,0,.45);
+    }
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue","Microsoft YaHei",sans-serif;
+    min-height:100vh;
+    display:flex;align-items:center;justify-content:center;
+    padding:24px 16px calc(24px + env(safe-area-inset-bottom));
+  }
+  .wrap{width:100%;max-width:480px}
+  .brand{
+    display:flex;align-items:center;gap:8px;
+    font-size:13px;color:var(--sub);margin-bottom:14px;justify-content:center;
+  }
+  .brand span{letter-spacing:.02em}
+  .card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:18px;
+    box-shadow:var(--shadow);
+    padding:28px 22px 24px;
+    text-align:center;
+  }
+  .icon{
+    width:60px;height:60px;margin:0 auto 16px;
+    border-radius:14px;
+    background:linear-gradient(135deg,var(--brand),var(--brand-2));
+    display:flex;align-items:center;justify-content:center;
+    color:#fff;font-size:15px;font-weight:700;letter-spacing:-.5px;
+  }
+  h1{
+    font-size:19px;line-height:1.45;margin:0 0 10px;
+    font-weight:600;word-break:break-all;
+  }
+  .meta{font-size:13px;color:var(--sub);line-height:1.9;margin-bottom:22px}
+  .meta b{color:var(--text);font-weight:500}
+  .btn{
+    display:block;width:100%;
+    padding:15px 18px;border-radius:12px;border:0;
+    background:var(--brand);color:#fff;
+    font-size:16px;font-weight:600;text-decoration:none;
+    text-align:center;cursor:pointer;
+    transition:transform .12s ease, opacity .12s ease;
+  }
+  .btn:active{transform:scale(.985);opacity:.9}
+  .btn.ghost{
+    margin-top:10px;background:transparent;color:var(--brand);
+    border:1px solid var(--line);font-weight:500;font-size:15px;
+  }
+  .tip{font-size:12px;color:var(--sub);line-height:1.75;margin-top:18px;text-align:left}
+  .status{
+    margin-top:16px;font-size:13px;color:var(--ok);
+    min-height:18px;opacity:0;transition:opacity .3s ease;
+  }
+  .status.show{opacity:1}
+
+  /* 微信 / QQ 内置浏览器引导层 */
+  .mask{
+    position:fixed;inset:0;z-index:99;display:none;
+    background:rgba(0,0,0,.72);
+    color:#fff;
+    padding:0 24px;
+    backdrop-filter:blur(2px);
+  }
+  .mask.on{display:flex;flex-direction:column;align-items:flex-end;padding-top:14px}
+  .arrow{
+    font-size:34px;line-height:1;margin-right:16px;
+    animation:float 1.4s ease-in-out infinite;
+  }
+  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
+  .mask-txt{
+    margin-top:10px;text-align:right;font-size:15px;line-height:1.9;
+    padding-right:6px;
+  }
+  .mask-txt b{color:#ffd479}
+  .mask-txt .big{font-size:17px;font-weight:600;display:block;margin-bottom:6px}
+  .mask-btn{
+    margin-top:22px;align-self:center;
+    padding:12px 24px;border-radius:10px;
+    border:1px solid rgba(255,255,255,.5);
+    background:transparent;color:#fff;font-size:15px;
+  }
+  footer{
+    text-align:center;font-size:12px;color:var(--sub);
+    margin-top:16px;line-height:1.7;
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="brand"><span>上海大学上海美术学院研究生会</span></div>
+
+  <div class="card">
+    <div class="icon">DOC</div>
+    <h1>{{FILENAME}}</h1>
+    <div class="meta">
+      文件格式 Word（.docx）　·　大小 {{SIZE}}<br>
+      填写后请按通知要求提交
+    </div>
+
+    <button class="btn" id="dlBtn" type="button">立即下载</button>
+    <button class="btn ghost" id="copyBtn" type="button">复制链接</button>
+    <div class="status" id="status"></div>
+
+    <div class="tip">
+      如在微信中点击后没有反应，请点击右上角「···」→ 选择「在浏览器打开」，即可正常下载。
+    </div>
+  </div>
+
+  <footer>上海大学上海美术学院研究生会 · 2026 入会报名</footer>
+</div>
+
+<!-- 微信 / QQ 内置浏览器引导 -->
+<div class="mask" id="mask">
+  <div class="arrow">&#9650;</div>
+  <div class="mask-txt">
+    <span class="big">请点击右上角「···」</span>
+    选择 <b>「在浏览器打开」</b><br>即可下载报名表
+  </div>
+  <button class="mask-btn" id="maskCopy" type="button">先复制链接</button>
+</div>
+
+<script>
+(function () {
+  var FILE_URL = "form.docx";
+  var ua = navigator.userAgent.toLowerCase();
+  var inWechat = ua.indexOf("micromessenger") > -1;
+  var inQQ = ua.indexOf(" qq/") > -1 || ua.indexOf("mqqbrowser") > -1;
+  var inApp = inWechat || inQQ;
+
+  var mask = document.getElementById("mask");
+  var statusEl = document.getElementById("status");
+  var dlBtn = document.getElementById("dlBtn");
+
+  function say(msg) {
+    statusEl.textContent = msg;
+    statusEl.classList.add("show");
+    setTimeout(function () { statusEl.classList.remove("show"); }, 2600);
+  }
+
+  function triggerDownload() {
+    var a = document.createElement("a");
+    a.href = FILE_URL;
+    a.download = "{{FILENAME}}";
+    a.rel = "noopener";
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(function () { a.remove(); }, 1000);
+  }
+
+  function fullUrl() {
+    return new URL("form.docx", location.href).href;
+  }
+
+  function copyLink(btn) {
+    var url = fullUrl();
+    var done = function () { say("链接已复制，可在浏览器中打开下载"); };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url).then(done, fallback);
+    } else {
+      fallback();
+    }
+    function fallback() {
+      var ta = document.createElement("textarea");
+      ta.value = url;
+      ta.style.position = "fixed";
+      ta.style.opacity = "0";
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand("copy"); done(); }
+      catch (e) { prompt("请长按复制以下链接：", url); }
+      ta.remove();
+    }
+  }
+
+  if (inApp) {
+    // 微信 / QQ 内置浏览器无法直接下载文件，展示引导层
+    mask.classList.add("on");
+    document.body.style.overflow = "hidden";
+    // 仍然尝试一次，部分安卓机型可唤起下载
+    setTimeout(triggerDownload, 400);
+  } else {
+    // 普通浏览器：自动触发一次下载
+    setTimeout(function () {
+      triggerDownload();
+      say("下载已开始，若未弹出请点击下方按钮");
+    }, 500);
+  }
+
+  dlBtn.addEventListener("click", triggerDownload);
+  document.getElementById("copyBtn").addEventListener("click", function () { copyLink(this); });
+  document.getElementById("maskCopy").addEventListener("click", function () { copyLink(this); });
+  mask.addEventListener("click", function (e) {
+    if (e.target === mask) this.classList.remove("on");
+  });
+})();
+</script>
+</body>
+</html>
