@@ -138,7 +138,8 @@
     <div class="status" id="status"></div>
 
     <div class="tip">
-      如在微信中点击后没有反应，请点击右上角「···」→ 选择「在浏览器打开」，即可正常下载。
+      微信内无法直接保存文件（容易存成 0 字节）。<br>
+      请复制链接后在浏览器中打开下载，或点击右上角「···」→「在浏览器打开」。
     </div>
   </div>
 
@@ -149,8 +150,9 @@
 <div class="mask" id="mask">
   <div class="arrow">&#9650;</div>
   <div class="mask-txt">
-    <span class="big">请点击右上角「···」</span>
-    选择 <b>「在浏览器打开」</b><br>即可下载报名表
+    <span class="big">微信内无法直接保存文件</span>
+    请点击右上角「···」<br>选择 <b>「在浏览器打开」</b> 后下载<br>
+    或先复制链接，再粘贴到浏览器
   </div>
   <button class="mask-btn" id="maskCopy" type="button">先复制链接</button>
 </div>
@@ -189,7 +191,11 @@
 
   function copyLink(btn) {
     var url = fullUrl();
-    var done = function () { say("链接已复制，可在浏览器中打开下载"); };
+    var done = function () {
+      say("链接已复制，请到浏览器粘贴打开");
+      if (btn && btn.id !== "copyBtn") btn.textContent = "已复制";
+      if (btn && btn.id === "copyBtn") btn.textContent = "已复制";
+    };
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(url).then(done, fallback);
     } else {
@@ -209,11 +215,18 @@
   }
 
   if (inApp) {
-    // 微信 / QQ 内置浏览器无法直接下载文件，展示引导层
+    // 微信 / QQ 内置浏览器会把附件存成 0 字节 —— 不触发下载，改为引导
     mask.classList.add("on");
     document.body.style.overflow = "hidden";
-    // 仍然尝试一次，部分安卓机型可唤起下载
-    setTimeout(triggerDownload, 400);
+    dlBtn.textContent = "复制下载链接";
+    dlBtn.removeAttribute("download");
+    dlBtn.setAttribute("href", "javascript:void(0);");
+    dlBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      copyLink(this);
+      mask.classList.add("on");
+      document.body.style.overflow = "hidden";
+    });
   } else {
     // 普通浏览器：自动触发一次下载
     setTimeout(function () {
