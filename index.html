@@ -127,13 +127,13 @@
 
   <div class="card">
     <div class="icon">DOC</div>
-    <h1>{{FILENAME}}</h1>
+    <h1>上美研究生会2026入会报名表.docx</h1>
     <div class="meta">
-      文件格式 Word（.docx）　·　大小 {{SIZE}}<br>
+      文件格式 Word（.docx）　·　大小 93 KB<br>
       填写后请按通知要求提交
     </div>
 
-    <button class="btn" id="dlBtn" type="button">立即下载</button>
+    <a class="btn" id="dlBtn" href="上美研究生会2026入会报名表.docx" download="上美研究生会2026入会报名表.docx">立即下载</a>
     <button class="btn ghost" id="copyBtn" type="button">复制链接</button>
     <div class="status" id="status"></div>
 
@@ -157,7 +157,7 @@
 
 <script>
 (function () {
-  var FILE_URL = "form.docx";
+  var FILE_URL = "上美研究生会2026入会报名表.docx";
   var ua = navigator.userAgent.toLowerCase();
   var inWechat = ua.indexOf("micromessenger") > -1;
   var inQQ = ua.indexOf(" qq/") > -1 || ua.indexOf("mqqbrowser") > -1;
@@ -176,7 +176,7 @@
   function triggerDownload() {
     var a = document.createElement("a");
     a.href = FILE_URL;
-    a.download = "{{FILENAME}}";
+    a.download = "上美研究生会2026入会报名表.docx";
     a.rel = "noopener";
     document.body.appendChild(a);
     a.click();
@@ -184,7 +184,7 @@
   }
 
   function fullUrl() {
-    return new URL("form.docx", location.href).href;
+    return new URL("上美研究生会2026入会报名表.docx", location.href).href;
   }
 
   function copyLink(btn) {
@@ -222,7 +222,6 @@
     }, 500);
   }
 
-  dlBtn.addEventListener("click", triggerDownload);
   document.getElementById("copyBtn").addEventListener("click", function () { copyLink(this); });
   document.getElementById("maskCopy").addEventListener("click", function () { copyLink(this); });
   mask.addEventListener("click", function (e) {
